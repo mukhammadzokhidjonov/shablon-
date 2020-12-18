@@ -1,0 +1,35 @@
+@mixin beforeEl ($bgImg, $bgPos:center, $bgSize:contain, $width:auto, $height:auto, $top:0, $right:0,$bottom:0,$left:0) {
+    content:"";
+    position:absolute;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    margin:auto;
+    background-image: $bgImg;
+    background-position: $bgPos;
+    background-size: $bgSize;
+    width: $width;
+    height: $height;
+    top:$top;
+    right: $right;
+    bottom:$bottom;
+    left:$left;
+
+}
+
+@mixin textStyle ($fSize, $fStyle, $fWeight, $lHeight, $color) {
+    font-size: $fSize;
+    font-style: $fStyle;
+    font-weight:$fWeight;
+    line-height: $lHeight;
+    color: $color;
+}
+%transition {
+    transition: all ease 0.5s;
+}
+
+@mixin backImg () {
+    background-image: $bgImg;
+    background-position: $bgPos;
+    background-size: $bgSize;
+    background-repeat: no-repeat;
+}

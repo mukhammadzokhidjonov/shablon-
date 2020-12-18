@@ -1,0 +1,60 @@
+@import './mixins' ;
+@import './variables';
+@import './normalize';
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin:0 auto;
+    padding:0 15px;
+    box-sizing: border-box;
+
+    @media only screen and (max-width:992px) {
+        max-width: 960px;
+    }
+
+    @media only screen and (max-width:768px) {
+        max-width: 720px;
+    }
+
+    @media only screen and (max-width:576px) {
+        max-width: 540px;
+    }
+}
+
+@font-face {
+    font-family: 'regular500';
+    src: url('../fonts/FuturaPT-Medium.eot');
+    src: url('../fonts/FuturaPT-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-Medium.woff') format('woff'),
+        url('../fonts/FuturaPT-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'light300';
+    src: url('../fonts/FuturaPT-Light.eot');
+    src: url('../fonts/FuturaPT-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-Light.woff') format('woff'),
+        url('../fonts/FuturaPT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'bold';
+    src: url('../fonts/FuturaPT-Bold.eot');
+    src: url('../fonts/FuturaPT-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/FuturaPT-Bold.woff') format('woff'),
+        url('../fonts/FuturaPT-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 {
+    @include textStyle (25px, italic, normal, 50px);
+}
